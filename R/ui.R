@@ -14,8 +14,7 @@ ui <- function() {
           c(
             "XFe24" = "XFe24LotRelease",
             "XFe96" = "XFe96LotRelease",
-            "XFp" = "XFpLotRelease",
-            "XF24 LEGACY" = "XF24LotRelease"
+            "XFp" = "XFpLotRelease"
           ),
           selected = FALSE,
           multiple = FALSE
