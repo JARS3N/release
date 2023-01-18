@@ -1,0 +1,10 @@
+Package: release
+Type: Package
+Title: RFS
+Version: 0.1.0
+Author: jars3n@gmail.com
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: releases
+License: none
+Encoding: UTF-8
+LazyData: true
