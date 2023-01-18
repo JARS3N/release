@@ -9,7 +9,7 @@ License: none
 Imports:
         RMySQL,
         rmarkdown,
-        shinyjs
+        shinyjs,
         shiny,
         dplyr
 Encoding: UTF-8
