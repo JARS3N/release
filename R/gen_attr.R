@@ -1,4 +1,4 @@
-gen_attr<-function(x){c(
+gen_attr<-function(){c(
   "pH.LED.avg",
   'pH.LED.CV',
   'Gain.Avg',
