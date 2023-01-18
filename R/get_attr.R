@@ -6,9 +6,6 @@ gen_attr<-function(x){c(
   'O2.LED.Avg',
   'O2.LED.CV',
   'KSV.Avg',
-  'KSV.CV',
-  'pH Height',
-  'O2 Height',
-  'Spot Deposition'
-)[1:x]
+  'KSV.CV'
+)
 }
