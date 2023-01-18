@@ -1,6 +1,6 @@
 Package: release
 Type: Package
-Title: RFS
+Title: release
 Version: 0.1.0
 Author: jars3n@gmail.com
 Maintainer: The package maintainer <yourself@somewhere.net>
