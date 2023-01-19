@@ -1,4 +1,4 @@
-generate_rmd<- function(lot,inst,type,kbl){
+generate_rmd<- function(Lot,inst,type,kbl){
     dash<-"---  "
     blank<-"  "
     end_tick<-"```  "
