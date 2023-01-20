@@ -1,6 +1,6 @@
 test_specs <- function(targets,ctg_means){
 # takes self$targets & self$ctg_means
-vals<-setNames(ctg_means$Values,ctg_means$attributes)
+vals<-as.numeric(setNames(ctg_means$Values,ctg_means$attributes))
 OUT<- NULL
 OUT[1] <- vals['pH.LED.avg'] >= targets$LED_LOW &  vals['pH.LED.avg'] <=  targets$pH_LED_high
 OUT[2] <- vals['pH.LED.CV'] < 30
