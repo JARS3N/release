@@ -51,8 +51,8 @@ release <- R6::R6Class(
                                                        self$targets$ksv,
                                                        self$targets$attr_len)
       self$ctg_means$Results<-test_specs(self$targets,self$ctg_means)
-      self$ctg_means$Results[is.na(self$ctg_means$Results)]<-"???"
-      self$ctg_means$Values[is.na(self$ctg_means$Values)]<-"missing"
+      #self$ctg_means$Results[is.na(self$ctg_means$Results)]<-"???"
+      #self$ctg_means$Values[is.na(self$ctg_means$Values)]<-"missing"
       self$kable_markdown <- get_kable(self$ctg_means)
     }
   )
