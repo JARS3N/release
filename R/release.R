@@ -12,8 +12,6 @@ release <- R6::R6Class(
     means = NULL,
     sds = NULL,
     cvs = NULL,
-    spot_height = NULL,
-    dryqc = NULL,
     specs_here = NULL,
     ctg_means =  NULL,
     kable_markdown = NULL,
