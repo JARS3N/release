@@ -10,6 +10,6 @@ OUT[5] <- vals['O2.LED.Avg'] >= targets$LED_LOW &  vals['O2.LED.Avg'] <=  target
 OUT[6] <- vals['O2.LED.CV'] < 30
 OUT[7] <- vals['KSV.Avg'] >= (.9 * targets$ksv) & vals['KSV.Avg'] <= (1.1 * targets$ksv)
 OUT[8] <- vals['KSV.CV'] < 5
-c("FAIL","PASS")[factor(OUT,levels=c(F,T)]
+c("FAIL","PASS")[factor(OUT,levels=c(F,T))]
 
 }
