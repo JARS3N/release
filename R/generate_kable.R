@@ -6,6 +6,7 @@ get_kable <- function(ctg_means) {
     row.names = F,
     escape = FALSE,
     longtable = T,
-    options = list(rows.print = 11)
+    options = list(rows.print = 11),
+    align = align=c('l','l','c','c','c')
   )
 }
