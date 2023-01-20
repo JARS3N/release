@@ -6,5 +6,6 @@ sn_means <- function(wetqc) {
       O2.Led.avg = mean(O2.LED,na.rm=T),
       KSV.avg = mean(KSV, na.rm = T)
     ) %>% select(-sn) %>%
-  as.data.frame(lapply(.,nan2na))
+  lapply(.,nan2na) %>%
+  data.frame()
 }
