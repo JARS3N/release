@@ -15,7 +15,7 @@ release <- R6::R6Class(
     specs_here = NULL,
     ctg_means =  NULL,
     kable_markdown = NULL,
-    RMD = function(){generate_rmd(self$Lot,self$Inst,self$type,self$kable_markdown)},
+    RMD = function(){generate_rmd(self$Lot,self$Inst,self$ctg_means)},
     wet_qc = NULL,
     initialize = function(LOT, INST) {
       require(dplyr)
