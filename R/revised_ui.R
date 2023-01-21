@@ -1,4 +1,5 @@
 revised_ui <- function() {
+  library(shiny)
   fluidPage(
     titlePanel('Download a PDF report'),
     shinyjs::useShinyjs(),
