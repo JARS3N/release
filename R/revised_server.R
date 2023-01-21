@@ -41,20 +41,11 @@ revised_server <- function() {
     })
 
     output$downloadData <- downloadHandler(
-      filename <- paste0(
-        "RFS_Lot-",
-        HOLD$release$Lot,
-        "_Inst-",
-        HOLD$release$Inst,
-        "_",
-        Sys.Date(),
-        ".pdf"
-      ),
+      filename <- function(lot=HOLD$release$Lot,inst=HOLD$release$Inst){
+        paste0("RFS_Lot-",lot,"_Inst-",inst,"_",Sys.Date(),".pdf")},
       content <- function(file) {
         write(HOLD$release$RMD(), file = "temp.rmd")
-        out <-
-          rmarkdown::render("temp.rmd",
-                            "pdf_document")
+        out <- rmarkdown::render("temp.rmd","pdf_document")
         file.copy("temp.pdf", file)
         unlink("temp.rmd")
         unlink("temp.pdf")
