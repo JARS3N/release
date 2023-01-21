@@ -37,7 +37,7 @@ revised_server <- function() {
         HOLD$release$ctg_means
       }, options = list(dom = 't', pageLength = 11),
       rownames = FALSE)
-      shinyjs::show("downloadData")
+      #shinyjs::show("downloadData")
     })
 
     output$downloadData <- downloadHandler(
@@ -59,7 +59,7 @@ revised_server <- function() {
         unlink("temp.rmd")
         unlink("temp.pdf")
         HOLD$release <- NULL
-        output$sumtbl <- NULL
+        #output$sumtbl <- NULL
       }
     )
   }
