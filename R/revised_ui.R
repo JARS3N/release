@@ -17,7 +17,8 @@ revised_ui <- function() {
           choices = "..."
         ),
         actionButton("Compiler", "compile data"),
-        shinyjs::hidden(downloadButton('downloadData', 'print PDF'))
+        #shinyjs::hidden(downloadButton('downloadData', 'print PDF'))
+        downloadLink("downloadData", "Download")
       ),
       mainPanel(h3(textOutput("lotchoice")),
                 DT::dataTableOutput("sumtbl"))
