@@ -7,9 +7,9 @@ revised_server <- function() {
   rm(db)
   HOLD <- new.env()
   function(input, output, session) {
-    onStop(function() {
-      rm(list = ls())
-    })
+   # onStop(function() {
+   #   rm(list = ls())
+   # })
 
 
     updateSelectizeInput(
@@ -27,7 +27,7 @@ revised_server <- function() {
         selected = NULL
       )
       # output$sumtbl <- NULL
-      HOLD$release <- NULL
+      # HOLD$release <- NULL
     })
 
     observeEvent(input$Compiler, {
