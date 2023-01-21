@@ -59,7 +59,7 @@ revised_server <- function() {
         unlink("temp.rmd")
         unlink("temp.pdf")
         HOLD$release <- NULL
-        #output$sumtbl <- NULL
+        output$sumtbl <- NULL
       }
     )
   }
