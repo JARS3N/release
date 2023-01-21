@@ -1,4 +1,4 @@
-revise_server <- function() {
+revised_server <- function() {
   library(shiny)
   library(dplyr)
   library(release)
