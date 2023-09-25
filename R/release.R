@@ -42,8 +42,8 @@ release <- R6::R6Class(
         round(self$means$O2.Led.avg,0),
         round(self$cvs$O2.Led.avg,2),
         round(self$means$KSV.avg,4),
-        round(self$cvs$KSV.avg,2),scientific=FALSE)
-      )
+        round(self$cvs$KSV.avg,2)),scientific=FALSE)
+      
       self$ctg_means$specifications<-gen_spec_str(self$targets$LED_LOW,
                                                        self$targets$pH_LED_high,
                                                        self$targets$O2_LED_high,
