@@ -33,8 +33,9 @@ release <- R6::R6Class(
       #self$means <- summarise_all(self$sn_means,list(mean),na.rm=T)
       self$means <- summarise_all(self$sn_means, list(~mean(.x, na.rm = TRUE)))
       #self$sds <- summarise_all(self$sn_means,list(sd),na.rm=T)
-      self$sds <- summarise_all(self$sn_means,list(~sd(.x, na.rm = TRUE)))
-      self$cvs <- self$sds / self$means * 100
+      #self$sds <- summarise_all(self$sn_means,list(~sd(.x, na.rm = TRUE)))
+      #self$cvs <- self$sds / self$means * 100
+      self$csvs <- summarise_all(sn_cvs(self$wetqc),list(mean),na.rm=T)
       self$ctg_means<-data.frame(attributes = gen_attr())
       self$ctg_means$Values <- format(c(
         round(self$means$pH.Led.avg,0),
