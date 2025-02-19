@@ -39,13 +39,13 @@ release <- R6::R6Class(
       self$ctg_means<-data.frame(attributes = gen_attr())
       self$ctg_means$Values <- format(c(
         round(self$means$pH.Led.avg,0),
-        round(self$cvs$pH.Led.avg,2),
+        round(self$cvs$pH.LED,2),
         round(self$means$Gain.avg,2),
-        round(self$cvs$Gain.avg,2),
+        round(self$cvs$Gain,2),
         round(self$means$O2.Led.avg,0),
-        round(self$cvs$O2.Led.avg,2),
+        round(self$cvs$O2.LED,2),
         round(self$means$KSV.avg,4),
-        round(self$cvs$KSV.avg,2)),scientific=FALSE)
+        round(self$cvs$KSV,2)),scientific=FALSE)
       
       self$ctg_means$specifications<-gen_spec_str(self$targets$LED_LOW,
                                                        self$targets$pH_LED_high,
