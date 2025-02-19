@@ -17,6 +17,6 @@ get_targets <- function(lot) {
         intercept = PH_C
       ) %>%
       mutate(gain = (phem * slope) + intercept) %>%
-      collect(., warnings = FALSE)
+      collect()
   )
 }
