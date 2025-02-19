@@ -30,8 +30,10 @@ release <- R6::R6Class(
       self$targets$pH_LED_high <-setNames(c(15000,15000,15000),c("W","B","C"))[self$type]
       self$targets$O2_LED_high <-setNames(c(15000,15000,3000),c("W","B","C"))[self$type]
       self$sn_means <-sn_means(self$wetqc)
-      self$means <- summarise_all(self$sn_means,list(mean),na.rm=T)
-      self$sds <- summarise_all(self$sn_means,list(sd),na.rm=T)
+      #self$means <- summarise_all(self$sn_means,list(mean),na.rm=T)
+      self$means <- summarise_all(self$sn_means, list(~mean(.x, na.rm = TRUE)))
+      #self$sds <- summarise_all(self$sn_means,list(sd),na.rm=T)
+      self$sds <- summarise_all(self$sn_means,list(~sd(.x, na.rm = TRUE)))
       self$cvs <- self$sds / self$means * 100
       self$ctg_means<-data.frame(attributes = gen_attr())
       self$ctg_means$Values <- format(c(
